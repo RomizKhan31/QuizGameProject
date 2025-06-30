@@ -1,7 +1,6 @@
 # QuizGame
 
-A fun and interactive quiz application developed by MD ROMIZ UDDIN KHAN, AMIR HAMZA, and ANIK MALLIK.
-ID : IT22044,IT22045,IT22046
+A fun and interactive quiz application developed by MD ROMIZ UDDIN KHAN(IT22045), AMIR HAMZA(IT22046), and ANIK MALLIK(IT22044).
 
 ## Features
 - Multiple-choice questions
