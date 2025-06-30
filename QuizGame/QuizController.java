@@ -1,3 +1,5 @@
+//Copied from ChatGPT but I understand perfectly
+
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
@@ -18,7 +20,7 @@ public class QuizController {
     private int currentQuestion = 0;
     private int score = 0;
     private Timeline timeline;
-    private int timeLeft = 10;
+    private int timeLeft = 30;
 
     public void initialize() {
         // Bind ToggleGroup to options programmatically
@@ -49,7 +51,7 @@ public class QuizController {
             opt3.setText(options[2]);
             opt4.setText(options[3]);
             optionGroup.selectToggle(null);
-            timeLeft = 10;
+            timeLeft = 30;
         } else {
             askForNameAndSaveScore();
         }
@@ -81,7 +83,7 @@ public class QuizController {
         List<QuizModel> list = new ArrayList<>();
         try (Connection conn = DBConnection.getConnection()) {
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM questions ORDER BY RAND() LIMIT 8");
+            ResultSet rs = st.executeQuery("SELECT * FROM questions ORDER BY RAND() LIMIT 5");
 
             while (rs.next()) {
                 String q = rs.getString("question_text");
